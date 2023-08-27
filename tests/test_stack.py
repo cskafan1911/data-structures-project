@@ -16,3 +16,11 @@ class TestStack(unittest.TestCase):
         self.stack.push(10)
         assert self.stack.size == 1
         assert self.stack.top.data == 10
+
+    def test_pop(self):
+        stack = Stack()
+        stack.push('data1')
+        stack.push('data2')
+        data = stack.pop()
+        assert data == 'data2'
+        assert stack.top.data == 'data1'
